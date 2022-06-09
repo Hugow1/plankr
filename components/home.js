@@ -1,9 +1,10 @@
 import Footer from "./footer";
+import React from "react";
 import { useState, useRef, useEffect } from "react";
 import { supabase } from "../utils/supabaseClient";
 import { formatTime } from "../utils/formatTime";
 
-export default function Home({ session }) {
+export default function Home(session) {
   // all variables are declared here
   const [planking, setPlanking] = useState(false);
   const [oldTime, setOldTime] = useState(0);
@@ -84,7 +85,7 @@ export default function Home({ session }) {
     <>
       {!planking ? (
         <div className="flex flex-col items-center w-full max-w-md px-20 mx-auto mt-20">
-          <h1 className="mb-5 text-5xl font-bold text-center">Let's Plank!</h1>
+          <h1 className="mb-5 text-5xl font-bold text-center">Lets Plank!</h1>
           <p className="mb-2 text-center">
             Plank using this app. The goal is to improve your own plank time bit
             by bit.
@@ -106,7 +107,7 @@ export default function Home({ session }) {
         </div>
       ) : (
         <div className="flex flex-col items-center w-full max-w-md px-20 mx-auto mt-20">
-          <h1 className="mb-5 text-5xl font-bold text-center">Let's Plank!</h1>
+          <h1 className="mb-5 text-5xl font-bold text-center">Lets Plank!</h1>
           <div className="flex flex-col items-center mt-10">
             <span className="text-3xl font-semibold">Previous time:</span>
             <span className="text-2xl">{formatTime(oldTime)}</span>

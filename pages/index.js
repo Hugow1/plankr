@@ -5,7 +5,7 @@ import Register from "../components/register";
 import Footer from "../components/footer";
 import Home from "../components/home";
 
-export default function home() {
+export default function Index() {
   const [session, setSession] = useState(null);
   const [register, setRegister] = useState(false);
   const [auth, setAuth] = useState(true);
@@ -26,9 +26,9 @@ export default function home() {
   return (
     <div className="">
       {!session ? (
-        <div className="max-w-md mx-auto flex flex-col justify-center w-full min-h-screen">
-          <div className="flex flex-col justify-center w-full text-center px-20 mt-20">
-            <h1 className="text-5xl font-bold mb-5">Plankr</h1>
+        <div className="flex flex-col justify-center w-full max-w-md min-h-screen mx-auto">
+          <div className="flex flex-col justify-center w-full px-20 mt-20 text-center">
+            <h1 className="mb-5 text-5xl font-bold">Plankr</h1>
             <p className="mb-2">
               Your personal planking counter and statics app in one place.
             </p>
@@ -38,7 +38,7 @@ export default function home() {
             <>
               <Auth />
               <button
-                className="mt-10 text-lg text-white font-semibold bg-green-500 py-3 px-6 rounded-md focus:outline-none focus:ring-2"
+                className="px-6 py-3 mt-10 text-lg font-semibold text-white bg-green-500 rounded-md focus:outline-none focus:ring-2"
                 onClick={() => showRegister()}
               >
                 Register
